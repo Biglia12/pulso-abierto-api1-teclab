@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulso Abierto</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pulso Abierto</h1>
+      <p>Consulta de precios de criptomonedas en tiempo real.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="consulta-titulo">
+        <h2 id="consulta-titulo">Consultar criptomonedas</h2>
+
+        <form id="form-consulta">
+          <button type="submit" id="btn-consultar">
+            Consultar precios
+          </button>
+        </form>
+
+        <p id="estado" role="status" aria-live="polite">
+          Presioná el botón para consultar los precios.
+        </p>
+
+        <button type="button" id="btn-reintentar" hidden>
+             Volver a intentar
+        </button>
+
+      </section>
+
+      <section aria-labelledby="resultados-titulo">
+        <h2 id="resultados-titulo">Resultados</h2>
+        <div id="resultados"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Fuente de datos: CoinGecko API</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
